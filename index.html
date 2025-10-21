@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Search - Find Your Journey</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚂 Train Search</h1>
+            <p>Find your perfect journey with ease</p>
+        </div>
+
+        <div class="search-card">
+            <form class="search-form" id="searchForm">
+                <div class="form-group">
+                    <label for="sourceCode">From Station</label>
+                    <input type="text" id="sourceCode" name="sourceCode" placeholder="Enter source station code (e.g., NDLS)" required>
+                    <div class="input-hint">Station Code</div>
+                </div>
+                <div class="form-group">
+                    <label for="destinationCode">To Station</label>
+                    <input type="text" id="destinationCode" name="destinationCode" placeholder="Enter destination station code (e.g., CST)" required>
+                    <div class="input-hint">Station Code</div>
+                </div>
+                <button type="submit" class="search-btn">
+                    <span class="btn-text">Search Trains</span>
+                    <span class="btn-icon">🔍</span>
+                </button>
+            </form>
+        </div>
+
+        <div class="loading" id="loading">
+            <div class="loading-spinner"></div>
+            <p>Searching for trains...</p>
+        </div>
+
+        <div class="error-message" id="errorMessage" style="display: none;">
+            <div class="error-content">
+                <span class="error-icon">⚠️</span>
+                <p id="errorText"></p>
+            </div>
+        </div>
+
+        <div class="results-container" id="resultsContainer">
+            <div class="results-header">
+                <h2>Available Trains</h2>
+                <div class="route-info" id="routeInfo"></div>
+            </div>
+            <div class="trains-list" id="trainsList"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
